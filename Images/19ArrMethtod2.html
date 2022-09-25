@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)file:///G:/LavanyaLearning/JavaScript/JSPrograms/W3SchoolsJS/19ArrMethtod2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><h1>JavaScript Array Methods</h1>
+    <h2>Shift()</h2>
+    <p>The shift() method removes the first elementt of an array and shifts the other elements
+         to the left</p>
+    <p id="demo">banana</p>
+    <p id="demo7">banana,apple,orange,Mango</p>
+    <p id="demo6">apple,orange,Mango</p>
+    <h2>join()</h2>
+    <p>The unshift() method adds new element to the beginning of an array
+         and given the new length of an array</p>
+    <p id="demo1">4</p>
+    <p id="demo8">Lemon,apple,orange,Mango</p>
+    <h2>Length Property</h2>
+    <p>The length Property provides an easy way to append new elements
+        to an array without using the push() method.
+    </p>
+    <p id="demo2">Lemon,apple,orange,Mango,Kiwi</p>
+    <p></p>Deleting elements leaves undefined holes in an array.<p></p>
+    <p id="demo9">The First fruit is: Lemon</p>
+    <p id="demo4">The First fruit is: undefined</p>
+    <p id="demo3">,apple,orange,Mango,Kiwi</p>
+    <!----<p id="demo5"></p>-->
+    
+    
+        <script>
+            const fruits =["banana","apple","orange","Mango"];
+            document.getElementById('demo7').innerHTML=fruits;
+            document.getElementById('demo').innerHTML=fruits.shift();
+            document.getElementById('demo6').innerHTML=fruits;
+            document.getElementById('demo1').innerHTML=fruits.unshift('Lemon');
+            document.getElementById('demo8').innerHTML=fruits;
+            fruits[fruits.length]="Kiwi"
+            document.getElementById('demo2').innerHTML=fruits;
+            document.getElementById('demo9').innerHTML="The First fruit is: "+ fruits[0];
+            delete fruits[0];
+            document.getElementById('demo4').innerHTML="The First fruit is: "+ fruits[0];
+            document.getElementById('demo3').innerHTML=fruits
+
+            
+        </script>
+
+    
+
+</body></html>

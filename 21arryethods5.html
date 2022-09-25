@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <h1>JavaScript Array Sort</h1>
+    <p>The sort() methtod sorts an array alphabetically:</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p>Sort the array in ascending order</p>
+    <p id="demo2"></p>
+    <p>Sort the array in descending order</p>
+    <p id="demo3"></p>
+    <body>
+        <script>
+            const fruits=["banana","apple","mango","Orange"];
+            document.getElementById('demo').innerHTML=fruits.sort() +" - - " +
+            "sorts alphabetically 1st preference to Capital Letters";
+            document.getElementById('demo1').innerHTML=fruits.reverse()+ " -- " +
+            "Reverse the order";
+            const nums =[40,100,2,5,25]
+            nums.sort(function(a,b){
+                return a-b;
+            })
+            document.getElementById('demo2').innerHTML=nums;
+            nums.sort(function(a,b){
+                return b-a
+            })
+            document.getElementById('demo3').innerHTML=nums;
+
+        </script>
+    </body>
+</html>

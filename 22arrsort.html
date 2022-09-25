@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <h2>JavaScript Array Sort</h2>
+    <p>Click the buttons to srot the array alphabetically or numberically</p>
+    <button type="button" onclick="myfunalpha()">SortAlphabetically</button>
+    <button type="button" onclick="myfunnum()">SortNumerically</button>    
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <body>
+        <script>
+            const points=[40,100,25,6];
+            document.getElementById('demo').innerHTML=points;
+            function myfunalpha(){
+                points.sort();
+                debugger;
+                console.log('sortarrays')
+                document.getElementById('demo1').innerHTML=points;
+            }
+            
+            function myfunnum(){
+                points.sort(function(a,b){return b-a})
+                console.log('sortarraysnum')
+                document.getElementById('demo2').innerHTML=points;
+            }
+
+
+        </script>
+    </body>
+</html>
