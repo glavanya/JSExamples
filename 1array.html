@@ -6,14 +6,27 @@
     <p>The Array Object is used to story multiple values in a single variables</p>
     <p id="demo"></p>
     <p id="demo1"></p>
+
+    <p>Array.forEach() calls a function for each array element</p>
+    <p id="demo2">Defining values in single line</p>
+    
     <script>
     var cars =['saab','Volvo','BMW'];
-    document.getElementById('demo').innerHTML=cars;
+    document.getElementById('demo').innerHTML="Defining values in single line  : " + cars;
     const cars1 = [];
-    cars1[0]='abc';
-    cars1[1]='jsklfa'
-    cars1[3]='dkafj'
-    document.getElementById('demo1').innerHTML=cars1;
+    cars1[0]='saab';
+    cars1[1]='Volvo'
+    cars1[3]='BMW'
+    document.getElementById('demo1').innerHTML="Defining values seprately : " +cars1;
+
+    const fruits=["banana","apple","mango","kiwi"];
+    let text ="<ul>"
+    fruits.forEach(myFunction);
+    text+="</ul>";
+    document.getElementById('demo2').innerHTML=text;
+    function myFunction(value){
+        text+="<li>" +value+"</li>";
+    }
     </script>
 
 </body>

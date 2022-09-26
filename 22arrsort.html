@@ -2,11 +2,27 @@
 <html>
     <h2>JavaScript Array Sort</h2>
     <p>Click the buttons to srot the array alphabetically or numberically</p>
+    
+    
     <button type="button" onclick="myfunalpha()">SortAlphabetically</button>
-    <button type="button" onclick="myfunnum()">SortNumerically</button>    
     <p id="demo"></p>
+    <button type="button" onclick="myfunnum()">SortNumerically</button> 
     <p id="demo1"></p>
+    <button type="button" onclick="myfunrandom()">TryIt</button> 
     <p id="demo2"></p>
+    
+    <p>Click the button(again and again)to sort the array in random order</p>
+    <p id="demo3"></p>
+    <h2>Fisher Yates Method</h2>
+    <button type="button" onclick="myfunranfisher()">TryIt</button>    
+    <p id="demo4"></p>
+    <p>The lowest number is <span id="demo5"></span>.</p>
+    <p>The Highest number is <span id="demo6"></span>.</p>
+    <p> The Highest Number is <span id ="demo7"></span></p>
+    <p>The lowest number is <span id="demo8"></span>.</p>
+    <p>Sort Car Objects on age:</p>
+    <p id ="demo9"></p>
+    
     <body>
         <script>
             const points=[40,100,25,6];
@@ -23,7 +39,65 @@
                 console.log('sortarraysnum')
                 document.getElementById('demo2').innerHTML=points;
             }
+            
+            function myfunrandom(){
+                points.sort(function(){return 0.5 - Math.random()})
+                
+                document.getElementById('demo3').innerHTML=points;
+            }
+            
+            function myfunranfisher(){
+                for(let i=points.length-1;i>0;i--){
+                    console.log("MathRandom"+Math.random());
+                let j=Math.floor(Math.random()*i);
+                console.log("MathFloor " + Math.floor(Math.random()*i))
+                let k=points[i];
+                console.log("k is " + k)
+                points[i]=points[j];
+                console.log("pointsi " + points[i])
+                console.log("pointsj " + points[j])
+                points[j] =k;   
+                console.log("k is " + k)
+                }
+                               
+                document.getElementById('demo4').innerHTML=points;
+            }
+            points.sort(function (a,b){return a-b});
+            document.getElementById('demo5').innerHTML=points[0];
 
+            points.sort(function (a,b){return a-b});
+            document.getElementById('demo6').innerHTML=points[points.length-1];
+
+            function arrmax(arr){
+                return Math.max.apply(null,arr)
+            }
+            document.getElementById('demo7').innerHTML=arrmax(points);
+
+            function arrmin(arr){
+                return Math.min.apply(null,arr)
+            }
+            document.getElementById('demo8').innerHTML=arrmin(points);
+
+            const cars =[
+            {type: "Volvo",year :2016},
+            {type: "BMW",year: 2001},
+            {type: "Saab", year: 2010}
+            ];
+            //displayCars();
+
+            cars.sort(function(a,b){return a.year-b.year})
+            //displayCars();
+
+            function displayCars(){
+                document.getElementById('demo9').innerHTML=
+                cars[0].type +" "+cars[0].year + "<br>" +
+                cars[1].type +" "+cars[1].year + "<br>" +
+                cars[2].type +" "+cars[2].year + "<br>" 
+                
+            }
+
+            
+            
 
         </script>
     </body>
