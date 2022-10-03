@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <h1>JavaScript Statements</h1>
+    <p>A <b>JavaScript program</b> is a list of <b>statements</b>
+         to be executed by a computer.</p>
+         <p id="demo"></p>
+         <p>Javascript colde blocks are written between { and }</p>
+         <p id="demo1"></p>
+         <p id="demo2"></p>
+         <button type="button" onclick="myfunction()">ClickMe!</button>
+         <p>The best way to loop through an array is using a standard for loop:</p>
+         <p id="demo3"></p>
+         <h1>What Can JavaScript Do?</h1>
+         <p id="demo4">JavaScript can change style of an HTML element</p>
+         <button type="button" onclick="document.getElementById('demo4').style.fontSize='35px'">
+             StyleChange!</button>
+         <p>The push method appends a new elemnt to an array</p>
+         <p id="demo5"></p>
+         <button onclick="myfruits()">PushMetthod</button>
+    <body>
+        <script>       
+        var x=7;
+        var y=10;
+        var z=x+y;
+            document.getElementById('demo').innerHTML='The value of Z is ' +z;       
+        function myfunction(){
+            document.getElementById('demo1').innerHTML="HelloDolly";
+            document.getElementById('demo2').innerHTML="How are you";   
+        } 
+        const furits=["banana","apple","mango","kiwi"];
+            var flen = furits.length;
+            let text="<ul>";
+                for(let i=0;i<flen;i++){
+                    text+="<li>"+furits[i]+"</li>";
+                }
+                text+="</ul>"
+        document.getElementById('demo3').innerHTML=text; 
+        
+        const fruits=["banana","apple","mango","kiwi"];
+    //document.getElementById('demo').innerHTML=fruits;
+    function myfruits(){
+        fruits.push("orange");
+        document.getElementById('demo5').innerHTML=fruits;
+}
+
+
+        </script>
+    </body>
+</html>

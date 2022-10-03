@@ -13,6 +13,14 @@
         <p id ="demo2"></p>
         <p id ="demo3"></p>
         <p id ="demo4"></p>
+
+        <h1>JavaScript Arrays</h1>
+    <p>The typeof operator, when used on an array, returns object</p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+
         <script>
             const arr1=[40,50,60,70,80]
             //const arr1= new Array(40,50,60,70,80)
@@ -27,6 +35,18 @@
             document.getElementById('demo3').innerHTML=arr4;
             
             document.getElementById('demo4').innerHTML=arr5[0];
+
+
+            const fruits = ["banana", "orange", "apple"];
+            // typeof operator returns object because  js array is an object;
+            document.getElementById("demo5").innerHTML=typeof fruits;
+            // to solve this problem ecmascript 5 intoruduced array.isarray;
+            document.getElementById("demo6").innerHTML="Is give type 'array' "
+             + Array.isArray(fruits);
+             //The instanceof operator returns true if an object is creatted by a given operator
+             document.getElementById("demo7").innerHTML= fruits instanceof Array;
+
+
         </script>
         
     </body>

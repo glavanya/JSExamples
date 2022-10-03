@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <h1>Java Script Array For Each</h1>
+    <p>Calls a function one for each element</p>
+    <p id="demo"></p>
+     <body>
+        <script>
+    const numbers =[45,4,9,16,25];
+    let text ="";
+    numbers.forEach(myfunforeach);
+    document.getElementById('demo').innerHTML=text;
+    
+    function myfunforeach(value,index,array){
+        text+=value + " " + "<br>";
+    }
+      
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head><h1>Array Exercises</h1></head>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p>Write the command to remove "Greg" from the array.</p>
+    <p id="demo"></p>
+    <body>
+        <script>
+                let people = ["Greg", "Mary", "Devon", "James"];
+                for(let i =0 ;i<people.length;i++){
+                    console.log(people[i]);
+                    
+                }
+                console.log(people.toString());
+                document.getElementById('demo1').innerHTML=people.toString();
+                console.log(people.join('*'))  
+                let remove1stval = people.shift();
+                //console.log(remove1stval.toString());
+                document.getElementById('demo').innerHTML="Remove the 1st relement  " + people;
+
+
+        </script>
+
+    </body>
+</html>

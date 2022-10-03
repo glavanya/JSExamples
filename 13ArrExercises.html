@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>FilterMethod</h1>
+    <p id="demo"></p>
+    <h2>MapMethod</h2>
+    <p id ="demo1"></p>
+    <p id ="demo2"></p>
+    <h2>Find Method</h2>
+    <p id="demo3"></p>
+    <h2>Foreach Method</h2>
+    <p>Printed Item Values in Console</p>
+    <p id="foreach"></p>
+    <h2>Some Method-This will return true if some of the items matches</h2>
+    <p id="demo4"></p>
+    <h2>Every Method-This will return false if all of the items doesnt matches</h2>
+    <p id="demo5"></p>
+    <h2>Reduce Method-runs a function on each array element to produce (reduce it to) a single value</h2>
+    <p id="demo6"></p>
+    <h2>Includes Method - This allows us to check if an element is present in an array (including NaN, unlike indexOf)</h2>
+    <p id ="demo7"></p>
+</head>
+<body>
+    <script>
+        //Filter Method
+        const Items = [
+            {name: 'Bike', price: 100},
+            {name: 'TV', price: 200},
+            {name: 'Album', price: 10},
+            {name: 'Book', price: 5},
+            {name: 'Phone', price: 500},
+            {name: 'Computer', price:1000},
+            {name: 'Keyboard', price: 25}
+        ]
+
+        const filteredItems = Items.filter((item)=>{
+            return item.price <=100;
+        })
+        console.log(filteredItems)
+        document.getElementById('demo').innerHTML=
+        filteredItems[0].name +" "+ filteredItems[0].price + "<br>" +
+        filteredItems[1].name +" "+ filteredItems[1].price + "<br>" +
+        filteredItems[2].name +" "+ filteredItems[2].price + "<br>";
+        //filteredItems[3].name +" "+ filteredItems[3].price + "<br>";
+
+        //Map Method-
+        const MapItemName = Items.map((item)=>{
+            // return item.name + item.price;
+            return item.name;
+        });
+        const MapItemPrice = Items.map((item)=>{
+            // return item.name + item.price;
+            return item.price;
+        });
+        console.log(MapItemName)
+        document.getElementById('demo1').innerHTML=MapItemName;
+        document.getElementById('demo2').innerHTML=MapItemPrice;
+            // find method;
+        const foundItem = Items.find((item)=>{
+            return item.name==='Book';
+        });
+        console.log(foundItem);
+        document.getElementById('demo3').innerHTML=foundItem.name + "-" + foundItem.price;
+
+        //For Each Method
+        const foreachItems= Items.forEach((item)=>{
+            
+            return console.log(item.name +" - " +item.price);
+            
+            
+        })
+        
+        //Some Method
+
+        const hasinexpensiveitems = Items.some((item)=>{
+            return item.price<100;
+        })
+
+        console.log(hasinexpensiveitems)
+        document.getElementById('demo4').innerHTML="Any Inexpensive Items Available :" + hasinexpensiveitems;
+
+
+        // every Methods
+        const Itemsavil = Items.every((item)=>{
+            return item.price<=1000
+        })
+        console.log(Itemsavil)
+        document.getElementById('demo5').innerHTML="EveryItem :" + Itemsavil;
+
+        //reduce Method
+
+        const TotalValue = Items.reduce((currenttotal,item)=>{
+
+            return item.price+currenttotal;
+
+        },0)
+
+        document.getElementById('demo6').innerHTML=TotalValue;
+
+        //Includes Method
+
+        const arr1 = [1,2,3,4];
+        const itemincludes = arr1.includes(1);
+
+        document.getElementById('demo7').innerHTML=itemincludes;
+
+    </script>
+</body>
+</html>
